@@ -1,0 +1,67 @@
+.pendaftaranUp
+{
+    margin-top: -3em;
+    margin-bottom: -26em;
+}
+
+.pendaftaranUp .bg-pendaftaran
+{
+    background-color: #242323d2;
+}
+
+.pendaftaranUp .bg-pendaftaran h4
+{
+    color: #ffffff;
+    margin-bottom: -7px;
+}
+
+.pengaduanDown{
+    margin-top: 7em;
+    margin-bottom: 3em;
+    align-items: center;
+}
+
+.pengaduanDown .table-pengaduan h4{
+    margin-top: 2em;
+    text-align: center;
+}
+
+.table-pengaduan{
+    margin-top: 2em;
+}
+
+.bg-pengaduan{
+    background-color: #2d6db6;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.bg-pengaduan p{
+    color: #fff;
+    font-size: 18px;
+}
+
+.bg-pengaduan ul{
+    color: #ddac0a;
+    font-size: 30px;
+    line-height: 1.5;
+}
+
+.jumbotron{
+    width: 70%;
+    margin: auto;    
+}
+
+.jumbotron h3{
+    color: #fff;
+}
+
+.jumbotron i{
+    color: #ddac0a;
+    font-size: 50px;
+    float: right;
+    position: relative;
+    top: -1.3em;
+    right: -20px;
+    transform: rotate(140deg);
+}

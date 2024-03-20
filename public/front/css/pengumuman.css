@@ -1,0 +1,202 @@
+/* CSS untuk layar kecil (mobile) */
+@media only screen and (max-width: 600px) {
+    #countdown {
+        font-size: 14px;
+        margin-top: -1.5em;
+    }
+    
+    .atas {
+        margin-top: -1.5em;
+    }
+    
+    .countdown-item {
+        display: inline-block;
+        margin: 0 5px;
+        padding: 10px;
+        background-color: #34495e;
+        color: #fff;
+        border-radius: 5px;
+        animation: fadeIn 0.5s ease-in-out;
+    }
+    
+    .countdown-label {
+        font-weight: bold;
+        color: #f39c12;
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* CSS untuk layar besar (desktop) */
+@media only screen and (min-width: 601px) {
+    #countdown {
+        font-size: 16px;
+        margin-top: -1.5em;
+    }
+    
+    .atas {
+        margin-top: -1.5em;
+    }
+    
+    .countdown-item {
+        display: inline-block;
+        margin: 0 5px;
+        padding: 10px;
+        background-color: #34495e;
+        color: #fff;
+        border-radius: 5px;
+        animation: heartbeat 0.8s infinite;
+        /* animation: heartbeat 0.5s infinite, fadeIn 0.5s ease-in-out; */
+    }
+    .countdown-item1 {
+        display: inline-block;
+        margin: 0 5px;
+        padding: 10px;
+        background-color: #34495e;
+        color: #fff;
+        border-radius: 5px;
+    }
+    
+    .countdown-label {
+        font-weight: bold;
+        color: #f39c12;
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes heartbeat {
+        from {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+        to {
+            transform: scale(1);
+        }
+    }
+}
+
+/* Button WhatsApp */
+#whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(100%);
+  z-index: 99;
+}
+
+#whatsapp-button.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.5s;
+}
+
+.whatsapp-link {
+  text-decoration: none;
+}
+
+.whatsapp-icon {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+
+#whatsapp-button:hover .whatsapp-icon {
+  transform: rotate(360deg);
+}
+
+/* CSS untuk tombol WhatsApp */
+.whatsapp-hide {
+    display: none;
+}
+/* CSS untuk daftar admin */
+.admin-list {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/**/
+.glass-btn {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        padding: 10px 20px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    .glass-btn::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+        z-index: -1;
+    }
+
+    .glass-btn:hover::before {
+        backdrop-filter: blur(15px);
+    }
+
+    .text-container {
+        position: relative;
+        z-index: 1;
+        animation: moveText 2s infinite alternate;
+    }
+
+    @keyframes moveText {
+        0% { transform: translateX(-10px); }
+        100% { transform: translateX(10px); }
+    }
+
+    .blur-animation {
+        animation: blurEffect 2s infinite alternate;
+    }
+
+    @keyframes blurEffect {
+        0% { text-shadow: 0 0 5px rgba(255, 0, 0, 0.3); }
+        50% { text-shadow: 0 0 15px rgba(0, 255, 0, 0.6); }
+        100% { text-shadow: 0 0 5px rgba(0, 0, 255, 0.3); }
+    }
